@@ -79,3 +79,9 @@ ios/GoogleService-Info.plist
 sentry.js
 ios/sentry.properties
 android/sentry.properties
+
+# Ignore private sensitive keys apns server
+*.p8
+*.key
+*.csr
+*.cer
