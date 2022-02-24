@@ -15,7 +15,9 @@ import Router from './router';
 import { store, persistor } from './store';
 import i18n from './i18n';
 
-const Chatwoot = () => { 
+import './helpers/voip'
+
+const Chatwoot = () => {
   useEffect(() => {
     ErrorHelper.init();
     // To hide splash screen

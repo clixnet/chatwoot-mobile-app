@@ -1,0 +1,10 @@
+{
+  "name": "conversate-push-server",
+  "version": "0.0.0",
+  "private": true,
+  "dependencies": {
+    "@signalwire/node": "2.4.0",
+    "apn": "2.2.0",
+    "dotenv": "16.0.0"
+  }
+}

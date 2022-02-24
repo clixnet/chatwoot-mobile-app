@@ -5,6 +5,10 @@
 #import <React/RCTRootView.h>
 #import <React/RCTLinkingManager.h>
 
+#import <PushKit/PushKit.h>
+#import "RNCallKeep.h"
+#import "RNVoipPushNotificationManager.h"
+
 #ifdef FB_SONARKIT_ENABLED
 #import <FlipperKit/FlipperClient.h>
 #import <FlipperKitLayoutPlugin/FlipperKitLayoutPlugin.h>
@@ -41,6 +45,9 @@ static void InitializeFlipper(UIApplication *application) {
                                                    moduleName:@"Chatwoot"
                                             initialProperties:nil];
 
+  // https://github.com/react-native-webrtc/react-native-voip-push-notification/issues/59#issuecomment-691685841
+  [RNVoipPushNotificationManager voipRegistration];
+
   if (@available(iOS 13.0, *)) {
       rootView.backgroundColor = [UIColor systemBackgroundColor];
   } else {
@@ -68,9 +75,13 @@ static void InitializeFlipper(UIApplication *application) {
 - (BOOL)application:(UIApplication *)application continueUserActivity:(NSUserActivity *)userActivity
  restorationHandler:(void (^)(NSArray<id<UIUserActivityRestoring>> *restorableObjects))restorationHandler
 {
-  return [RCTLinkingManager application:application
-                   continueUserActivity:userActivity
-                     restorationHandler:restorationHandler];
+  [RCTLinkingManager application:application
+            continueUserActivity:userActivity
+              restorationHandler:restorationHandler];
+  // react-native-callkeep
+  return [RNCallKeep application:application
+            continueUserActivity:userActivity
+              restorationHandler:restorationHandler];
 }
 
 - (NSURL *)sourceURLForBridge:(RCTBridge *)bridge
@@ -80,6 +91,47 @@ static void InitializeFlipper(UIApplication *application) {
 #else
   return [[NSBundle mainBundle] URLForResource:@"main" withExtension:@"jsbundle"];
 #endif
+}
+
+// react-native-voip-push-notification add PushKit delegate method
+- (void)pushRegistry:(PKPushRegistry *)registry
+    didUpdatePushCredentials:(PKPushCredentials *)credentials
+                     forType:(NSString *)type {
+  [RNVoipPushNotificationManager didUpdatePushCredentials:credentials
+                                                  forType:(NSString *)type];
+}
+- (void)pushRegistry:(PKPushRegistry *)registry
+    didInvalidatePushTokenForType:(PKPushType)type {
+  // TODO
+}
+- (void)pushRegistry:(PKPushRegistry *)registry
+    didReceiveIncomingPushWithPayload:(PKPushPayload *)payload
+                              forType:(PKPushType)type
+                withCompletionHandler:(void (^)(void))completion {
+  NSString *uuid = [[[NSUUID UUID] UUIDString] uppercaseString];
+  // --- only required if we want to call `completion()` on the js side
+  // [RNVoipPushNotificationManager
+  //     addCompletionHandler:uuid
+  //        completionHandler:completion];
+  [RNVoipPushNotificationManager
+      didReceiveIncomingPushWithPayload:payload
+                                forType:(NSString *)type];
+  [RNCallKeep reportNewIncomingCall:uuid
+                             handle:@"Conversate"
+                         handleType:@"generic"
+                           hasVideo:false
+                // TODO add caller name in server side push data and show it here
+                localizedCallerName:@"Caller Name"
+                    supportsHolding:YES
+                       supportsDTMF:YES
+                   supportsGrouping:NO
+                 supportsUngrouping:NO
+                        fromPushKit:YES
+                            payload:payload.dictionaryPayload
+              withCompletionHandler:completion];
+  // --- don't need to call this if we do on the js side
+  // --- already add completion in above reportNewIncomingCall
+  // completion();
 }
 
 @end

@@ -77,6 +77,8 @@
 		83D084B924F942850025AECA /* Chatwoot.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = Chatwoot.entitlements; path = Chatwoot/Chatwoot.entitlements; sourceTree = "<group>"; };
 		94E7ACE34E06465C9425AC50 /* Inter-Italic.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Inter-Italic.otf"; path = "../assets/Inter-Italic.otf"; sourceTree = "<group>"; };
 		9CA6CE2540CBE0FCA1A9A85A /* Pods-Chatwoot.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chatwoot.release.xcconfig"; path = "Target Support Files/Pods-Chatwoot/Pods-Chatwoot.release.xcconfig"; sourceTree = "<group>"; };
+		9CE7CCC427C733BF0007B565 /* CallKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CallKit.framework; path = System/Library/Frameworks/CallKit.framework; sourceTree = SDKROOT; };
+		9CE7CCC627C733CE0007B565 /* Intents.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Intents.framework; path = System/Library/Frameworks/Intents.framework; sourceTree = SDKROOT; };
 		B32E386C37818CF29CF77237 /* Pods-Chatwoot-ChatwootTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chatwoot-ChatwootTests.debug.xcconfig"; path = "Target Support Files/Pods-Chatwoot-ChatwootTests/Pods-Chatwoot-ChatwootTests.debug.xcconfig"; sourceTree = "<group>"; };
 		BE3522429A5794AE98CA3B39 /* Pods-Chatwoot-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chatwoot-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-Chatwoot-tvOSTests/Pods-Chatwoot-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
 		D8CF0BBE601504D553FDB9AF /* libPods-Chatwoot-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Chatwoot-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -172,6 +174,8 @@
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9CE7CCC627C733CE0007B565 /* Intents.framework */,
+				9CE7CCC427C733BF0007B565 /* CallKit.framework */,
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
 				ED2971642150620600B7C4FE /* JavaScriptCore.framework */,
 				07BA2DA5BE3430A90F49C925 /* libPods-Chatwoot.a */,

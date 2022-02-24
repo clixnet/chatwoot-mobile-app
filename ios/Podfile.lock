@@ -380,6 +380,8 @@ PODS:
     - React-Core
   - RNSVG (12.2.0):
     - React-Core
+  - RNVoipPushNotification (3.3.0):
+    - React-Core
   - Sentry (7.1.4):
     - Sentry/Core (= 7.1.4)
   - Sentry/Core (7.1.4)
@@ -440,6 +442,7 @@ DEPENDENCIES:
   - "RNSentry (from `../node_modules/@sentry/react-native`)"
   - RNSnackbar (from `../node_modules/react-native-snackbar`)
   - RNSVG (from `../node_modules/react-native-svg`)
+  - RNVoipPushNotification (from `../node_modules/react-native-voip-push-notification`)
   - Yoga (from `../node_modules/react-native/ReactCommon/yoga`)
 
 SPEC REPOS:
@@ -562,6 +565,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native-snackbar"
   RNSVG:
     :path: "../node_modules/react-native-svg"
+  RNVoipPushNotification:
+    :path: "../node_modules/react-native-voip-push-notification"
   Yoga:
     :path: "../node_modules/react-native/ReactCommon/yoga"
 
@@ -629,6 +634,7 @@ SPEC CHECKSUMS:
   RNSentry: 68644ef607b780551cc555f084869764f2566652
   RNSnackbar: be3333a21a453ccc272f41a8add5a71f7d44dfcd
   RNSVG: 4ecc2e8f38b6ebe7889909570c26f3abe8059767
+  RNVoipPushNotification: 14bb5a389588ea1cbee4706a55df99950687fd6d
   Sentry: 1d3eb1a25f8c5333c88dd5603904a6d461cd9fcf
   Yoga: e6ecf3fa25af9d4c87e94ad7d5d292eedef49749
 

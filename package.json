@@ -69,6 +69,7 @@
     "react-native-snackbar": "2.4.0",
     "react-native-splash-screen": "3.3.0",
     "react-native-svg": "12.2.0",
+    "react-native-voip-push-notification": "3.3.0",
     "react-native-webview": "11.17.2",
     "react-redux": "7.2.6",
     "redux": "4.1.2",
