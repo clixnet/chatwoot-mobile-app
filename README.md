@@ -17,7 +17,7 @@
 </p>
 
 - **Supported Chatwoot version:** 1.18+
-- **Supported iOS versions**: 11+ 
+- **Supported iOS versions**: 11+
 - **Supported Android versions**: 5.0+
 
 ## Features
@@ -46,7 +46,7 @@
     <img alt="Download on the App Store" title="App Store" src="http://i.imgur.com/0n2zqHD.png" width="140">
   </a>
 
-  <a href="https://play.google.com/store/apps/details?id=com.chatwoot.app&hl=en">
+  <a href="https://play.google.com/store/apps/details?id=com.conversateapp.app&hl=en">
     <img alt="Get it on Google Play" title="Google Play" src="http://i.imgur.com/mtGRPuM.png" width="140">
   </a>
 </p>
@@ -57,11 +57,11 @@ To help with testing app updates before they're released, you can:
 
 Sign up to be a beta tester
 
-   - [Android](https://play.google.com/apps/testing/com.chatwoot.app) -  Open this link from your Android device
+   - [Android](https://play.google.com/apps/testing/com.conversateapp.app) -  Open this link from your Android device
    - [iOS](https://testflight.apple.com/join/ji5H8iSJ) - Open this link from your iOS device
-   
+
 You can leave the Beta testing program at any time:
-- On Android, [click this link](https://play.google.com/apps/testing/com.chatwoot.app) while logged in with your Google Play email address used to opt-in for the Beta program, then click **Leave the program**. 
+- On Android, [click this link](https://play.google.com/apps/testing/com.conversateapp.app) while logged in with your Google Play email address used to opt-in for the Beta program, then click **Leave the program**.
 - On iOS, access the `Chatwoot` app page in TestFlight and click **Stop Testing**.
 
 ## Feedback & Contributing
@@ -69,7 +69,7 @@ You can leave the Beta testing program at any time:
 Feel free to send us feedback on [Twitter](https://twitter.com/chatwootapp) or [file an issue](https://github.com/chatwoot/chatwoot-mobile-app/issues).
 
 If you wish to contribute, please take a quick look at the [CONTRIBUTING.md](https://www.chatwoot.com/docs/contributing-guide) and [SETUP_GUIDE.md](https://www.chatwoot.com/docs/contributing-guide/mobile-app/setup-guide).
- 
+
 If you want to self deploy the Chatwoot mobile app, please take a look at the [CUSTOM_RELEASE_GUIDE.md](https://www.chatwoot.com/docs/contributing-guide/mobile-app/custom-release-guide) guide.
 
 If there's anything you'd like to chat about, please feel free to join our [Discord](https://discord.gg/cJXdrwS) chat!

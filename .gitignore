@@ -70,11 +70,10 @@ buck-out/
 # Android release configuration
 android/api-fastlane.json
 android/gradle.properties
-# Firebase 
+
+# Firebase
 android/app/google-services.json
 ios/GoogleService-Info.plist
-
-
 
 # Sentry configuration
 sentry.js
